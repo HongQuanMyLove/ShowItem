@@ -1,5 +1,5 @@
---- HongQuanMyLove Dev Script ShowItem ---
-local HongQuan = require(game:GetService("Players").LocalPlayer.PlayerGui.Main.UIController.Inventory)
+-- HongQuan Script --
+local cac = require(game:GetService("Players").LocalPlayer.PlayerGui.Main.UIController.Inventory)
 local Inventory = game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("getInventory")
 local Items = {}
 local RaityLevel = {"Mythical","Legendary","Rare","Uncommon","Common"}
@@ -90,16 +90,16 @@ ccc.Parent = cac2
 for k,v in pairs(v) do 
    if Items[v.ItemName.Text] and Items[v.ItemName.Text].Mastery then 
        if v.ItemLine2.Text~="Accessory" then 
-           HongQuan = v.ItemName:Clone()
-           HongQuan.BackgroundTransparency = 1
-           HongQuan.TextSize = 10
-           HongQuan.TextXAlignment  = 2
-           HongQuan.TextYAlignment  = 2
-           HongQuan.ZIndex  = 5
-           HongQuan.Text = Items[v.ItemName.Text].Mastery
-           HongQuan.Size = UDim2.new(.5,0,.5,0)
-           HongQuan.Position = UDim2.new(.5,0,.5,0)
-           HongQuan.Parent = v
+           bucac = v.ItemName:Clone()
+           bucac.BackgroundTransparency = 1
+           bucac.TextSize = 10
+           bucac.TextXAlignment  = 2
+           bucac.TextYAlignment  = 2
+           bucac.ZIndex  = 5
+           bucac.Text = Items[v.ItemName.Text].Mastery
+           bucac.Size = UDim2.new(.5,0,.5,0)
+           bucac.Position = UDim2.new(.5,0,.5,0)
+           bucac.Parent = v
        end
        v.Parent = cac
    elseif v.ItemLine2.Text == "Blox Fruit" then 
@@ -128,7 +128,6 @@ local ListHuhu = {
 ["SharkmanKarate"] = Vector2.new(0,0),
 ["DragonTalon"] = Vector2.new(1,5),
 ["Godhuman"] = "rbxassetid://10338473987"
-["SanguineArt"] = Vector2.new(5,0)
 }
 local nguu = {}
 function GetNext() end
